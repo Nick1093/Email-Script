@@ -21,7 +21,7 @@ with smtplib.SMTP('smtp.gmail.com', 587) as smtp:
 
     df = openpyxl.load_workbook("Data.xlsx")
     df = df.active
-    for r in range(248,250):
+    for r in range(251,300):
         name = df.cell(row=r, column=1).value
         if name:
             name = name.split(" ")[0].title()
