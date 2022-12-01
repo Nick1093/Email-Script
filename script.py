@@ -19,9 +19,9 @@ with smtplib.SMTP('smtp.gmail.com', 587) as smtp:
 
     subject = "Western Student Reaching Out"
 
-    df = openpyxl.load_workbook("Data.xlsx")
+    df = openpyxl.load_workbook("CAD_Data.xlsx")
     df = df.active
-    for r in range(301,400):
+    for r in range(201,300): #501 - 600
         name = df.cell(row=r, column=1).value
         if name:
             name = name.split(" ")[0].title()
